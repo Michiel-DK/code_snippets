@@ -6,6 +6,7 @@ from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 
 def register(request):
     if request.method == 'POST':
+        # User creation form changed to user_register
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             form.save()

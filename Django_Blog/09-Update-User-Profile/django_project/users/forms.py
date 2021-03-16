@@ -8,8 +8,11 @@ class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
 
     class Meta:
+        # form to interact with
         model = User
+        # fields shown on form + order
         fields = ['username', 'email', 'password1', 'password2']
+        # completed form that inherits from UserCreationForm
 
 
 class UserUpdateForm(forms.ModelForm):
